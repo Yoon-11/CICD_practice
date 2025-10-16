@@ -16,6 +16,7 @@ jobs:
           key: ${{ secrets.EC2_PRIVATE_KEY }}
           script_stop: true
           script: |
+            set -e
             cd /home/ubuntu/CICD_practice/
             git pull origin main
             ./gradlew clean build
